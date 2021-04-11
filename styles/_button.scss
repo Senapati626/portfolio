@@ -1,0 +1,35 @@
+.cyber_btn{
+    box-shadow: none;
+    padding: 0.5em 1em;
+    font-family: $coolFont;
+    font-size: 1.2em;
+    border: none;
+    //clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0 60%);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.btn_black{
+    background-color: white;
+    &:hover{
+        color: #e0e4e4;
+        background-color: black;
+    }
+    ion-icon{
+        font-size: 1em;
+        bottom: 0;
+    }
+    clip-path: polygon(0 0, 100% 0, 100% 65%, 85% 100%, 8% 100%, 0 100%);
+}
+.btn_white{
+    background-color: $primaryBlack;
+    color: white;
+    &:hover{
+        color: black;
+        background-color: white;
+    }
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 85% 100%, 8% 100%, 0 70%);
+
+}

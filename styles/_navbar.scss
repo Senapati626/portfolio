@@ -1,0 +1,105 @@
+
+.home_nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(225,217,205,0.55);
+    z-index: 5;
+}
+.home_logo{
+    display: grid;
+    place-items: center;
+}
+.home_name{
+    display: none;
+    place-items: center;
+    height: 50px;
+    line-height: 32px;
+    font-family: $coolFont;
+    span:nth-child(1){
+        text-transform: uppercase;
+        font-size: 2em;
+    }
+    span:nth-child(2){
+        font-size: 1.5em;
+    }
+}
+.home_menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 8px;
+    span{
+        height: 4.5px;
+        background-color: black;
+        width: 40px;
+        transition: all 1s ease;
+    }
+}
+.close_menu{
+    span:nth-child(1){
+        transform: rotate(-45deg) translateY(8px);
+        
+    }
+    span:nth-child(2){
+        transform: rotate(45deg) translateY(-8px);
+    }
+    span:nth-child(3){
+        opacity: 0;
+    }
+}
+.menu_container{
+    width: calc(100% - 100px);
+    height: 100vh;
+    background: #1b1b1b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 3em;
+    gap: 1.5em;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    right: -100%;
+    transition: all 1s ease;
+    a{
+        text-decoration: none;
+        font-size: 5.5em;
+        font-family: sans-serif;
+        font-weight: 900;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-color: white;
+        -webkit-text-stroke-width: 0.5px;
+        cursor: pointer;
+        transition: 0.5s all;
+        &:hover{
+            -webkit-text-fill-color: white;
+            color: white;
+            -webkit-text-stroke-width: 0px;
+        }
+    }
+
+}
+@media only screen and (min-width: 450px){
+    .home_name{
+        display: grid;
+    }
+}
+@media only screen and (max-width: 450px){
+    .menu_container{
+        width: calc(100% - 70px);
+        padding: 0 1em;
+        a{
+            font-size: 3em;
+        }
+    }
+}

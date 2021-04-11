@@ -1,0 +1,71 @@
+@import './_variables.scsss';
+
+
+.home{
+    background-color: $primaryWhite;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 10vh;
+}
+
+
+.home_hero{
+    display: grid;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    padding: 0 2em;
+    gap: 10px;
+    .hero_left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        justify-content: center;
+        .hero_about{
+            font-size: 2em;
+        }
+        .hero_buttons{
+            display: flex;
+            gap: 20px;
+        }
+    }
+    .hero_right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.home_bg_text{
+    z-index: -1;
+    display: flex;
+    gap: 60px;
+    animation: slider 15s linear infinite;
+    h1{
+        font-size: 8em;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        font-weight: 1000;
+        -webkit-text-stroke-color: black;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1.5px;
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .home_hero{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+

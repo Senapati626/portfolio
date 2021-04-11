@@ -1,0 +1,33 @@
+@import './projects';
+@import './home';
+@import './navbar';
+@import './contact';
+@import './button';
+@import './skills';
+@import './loader';
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: Cyber;
+    src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+    font-display: swap;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap');
+html{
+    scroll-behavior: smooth;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+}
+body{
+    background-color: $primaryWhite;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media only screen and(min-width:800px){
+    html{
+        font-size: 20px;
+    }
+}

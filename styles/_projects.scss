@@ -1,0 +1,112 @@
+@import './_variables.scsss';
+
+.projects{
+    min-height: 100vh;
+    background-color: $primaryWhite;
+    display: flex;
+}
+.frame_fixed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100px;
+    background-color: $primaryBlack;
+    border: 0px 1px solid $primaryWhite;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    p{
+        text-transform: uppercase;
+        color: $primaryWhite;
+        font-size: 2.5em;
+        font-family: $vipFont;
+        letter-spacing: 2px;
+        transform: rotateZ(-90deg);
+        white-space: nowrap;
+        letter-spacing: 3px;
+        font-weight: 500;
+    }
+}
+.frame_scroll{
+    margin: 80px 0.5em 0 0.5em;
+    display: grid;
+    gap: 30px;
+    overflow-x: hidden;
+    .project_type{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        border-bottom: 2px solid $primaryBlack;
+        p{
+            font-size: 2.5em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+}
+
+.projects_personal{
+    padding: 1em 0;
+    display: grid;
+    gap: 20px;
+    ._project{
+        .project_name{
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+    }
+}
+.celeb{
+    background-color: white;
+}
+.covid{
+    background-color: #222429;
+    p{
+        color: whitesmoke;
+    }
+}
+._project_content{
+    margin: 1em 0;
+    width: 100%;
+    min-height: 476px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+.project_about{
+    padding: 0.8em 1em;
+    display: grid;
+    place-items: center;
+}
+.project_demo{
+    background-repeat: no-repeat;
+    background-size: cover;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .frame_scroll{
+        margin: 0 0 0 100px;
+    }
+    ._project_content{
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 1fr;
+    }
+}
+@media screen and (max-width: 420px){
+    .frame_fixed{
+        width: 70px;
+        p{
+            font-size: 2em;
+        }
+    }
+}

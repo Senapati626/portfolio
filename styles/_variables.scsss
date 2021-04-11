@@ -1,0 +1,5 @@
+$primaryWhite: #e1d9cd;
+$primaryBlack: #050303;
+$vipFont: 'Bodoni Moda', sans-serif;
+$coolFont: 'Cyber', serif;
+$writingFont: 'Caveat', cursive;
