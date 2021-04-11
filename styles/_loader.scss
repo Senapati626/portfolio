@@ -5,9 +5,9 @@
     opacity: 1;
     position: absolute;
     top: 0;
+    bottom: 0;
     z-index: 999;
-    height: 100vh;
-    //animation: preload 2s ease alternate infinite;
+    height: 100%;
     pointer-events: none;
     transition-delay: 2s;
     .mrito_sainik{
@@ -15,15 +15,35 @@
         height: 100%;
         transform-origin: top;
         transition: transform 0.5s ease;
-        background-color: #1e1e1e;
+        background-color: #201d1d;
         transition-delay: 0.5s;
-        //transform: scaleY(0);
     }
     .loader_2{
         transition-delay: 1s;
     }
     .loader_1{
+        padding: 0 0.5em 2.5em 0;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-content: flex-start;
+        gap: 15px;
         transition-delay: 1.5s;
+        p{
+            font-size: 1.2em;
+            font-family: $coolFont;
+            font-weight: bold;
+            white-space: nowrap;
+            color: #efe1eb;
+            span{
+                margin-left: 5px;
+                animation: preload 0.5s ease-out infinite;
+            }
+        }
+        svg{
+            width: 150px;
+            height: 150px;
+        }
     }
     .preloader_text{
         position: absolute;
@@ -35,7 +55,7 @@
         padding-left: 6em ;
         transform: scaleY(1);
         h2{
-            color: rgb(224, 223, 219);
+            color: #f7db6b;
             font-size: 10vw;
             opacity: 1;
             transition: opacity 0.5s ease-out;
@@ -47,6 +67,16 @@
     place-items: center;
 }
 
+.loader_1{
+    svg{
+        path{
+            stroke: #f5edcc;
+            stroke-width: 1.5px;
+            animation: stroke 3s ease-in-out infinite alternate;
+        }
+    }
+}
+
 @keyframes animation1 {
     from{
         transform: scaleY(1);
@@ -55,11 +85,25 @@
         transform: scaleY(0);
     }
 }
+@keyframes stroke{
+    0%{
+        stroke-dasharray: 100;
+    }
+    100%{
+        stroke-dasharray: 390;
+    }
+}
 @keyframes preload{
     from{
         opacity: 0;
     }
     to{
         opacity: 1;
+    }
+}
+@media screen and (max-width: 450px){
+    .preloader_text{
+        padding: 0;
+        justify-content: center;
     }
 }

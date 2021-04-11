@@ -1,4 +1,5 @@
 const loadingText = document.querySelector(".preloader_text h2");
+const loaded = document.querySelector("#loaded");
 const mritoSainik = document.querySelector(".loader_1");
 const mritoSainik2 = document.querySelector(".loader_2");
 const mritoSainik3 = document.querySelector(".loader_3");
@@ -23,12 +24,7 @@ const loopText = () => {
 }
 
 const anime = setInterval(function(){loopText();},1000);
-//loader.style.display = "none";
 
-// window.addEventListener("load", () => {
-//     clearInterval(anime);
-//     loader.style.opacity = 0;
-// })
 document.onreadystatechange = () => {
     if(document.readyState === 'complete'){
         clearInterval(anime);
@@ -36,8 +32,8 @@ document.onreadystatechange = () => {
         mritoSainik.style.transform = "translateY(-100%)";
         mritoSainik2.style.transform = "translateY(-100%)";
         mritoSainik3.style.transform = "translateY(-100%)";
-        //loader.style.display = "none";
+
         loader.style.opacity = "0";
-        console.log("ready");
+        loaded.style.display = "block";
     }
 }

@@ -26,6 +26,9 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+#loaded{
+    display: none;
+}
 @media only screen and(min-width:800px){
     html{
         font-size: 20px;

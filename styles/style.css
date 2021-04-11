@@ -981,8 +981,9 @@ textarea:hover {
   opacity: 1;
   position: absolute;
   top: 0;
+  bottom: 0;
   z-index: 999;
-  height: 100vh;
+  height: 100%;
   pointer-events: none;
   -webkit-transition-delay: 2s;
           transition-delay: 2s;
@@ -997,7 +998,7 @@ textarea:hover {
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  background-color: #1e1e1e;
+  background-color: #201d1d;
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
 }
@@ -1008,8 +1009,42 @@ textarea:hover {
 }
 
 .preloader .loader_1 {
+  padding: 0 0.5em 2.5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 15px;
   -webkit-transition-delay: 1.5s;
           transition-delay: 1.5s;
+}
+
+.preloader .loader_1 p {
+  font-size: 1.2em;
+  font-family: "Cyber", serif;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #efe1eb;
+}
+
+.preloader .loader_1 p span {
+  margin-left: 5px;
+  -webkit-animation: preload 0.5s ease-out infinite;
+          animation: preload 0.5s ease-out infinite;
+}
+
+.preloader .loader_1 svg {
+  width: 150px;
+  height: 150px;
 }
 
 .preloader .preloader_text {
@@ -1031,7 +1066,7 @@ textarea:hover {
 }
 
 .preloader .preloader_text h2 {
-  color: #e0dfdb;
+  color: #f7db6b;
   font-size: 10vw;
   opacity: 1;
   -webkit-transition: opacity 0.5s ease-out;
@@ -1042,6 +1077,13 @@ textarea:hover {
   display: -ms-grid;
   display: grid;
   place-items: center;
+}
+
+.loader_1 svg path {
+  stroke: #f5edcc;
+  stroke-width: 1.5px;
+  -webkit-animation: stroke 3s ease-in-out infinite alternate;
+          animation: stroke 3s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes animation1 {
@@ -1066,6 +1108,24 @@ textarea:hover {
   }
 }
 
+@-webkit-keyframes stroke {
+  0% {
+    stroke-dasharray: 100;
+  }
+  100% {
+    stroke-dasharray: 390;
+  }
+}
+
+@keyframes stroke {
+  0% {
+    stroke-dasharray: 100;
+  }
+  100% {
+    stroke-dasharray: 390;
+  }
+}
+
 @-webkit-keyframes preload {
   from {
     opacity: 0;
@@ -1081,6 +1141,15 @@ textarea:hover {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .preloader_text {
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -1105,6 +1174,10 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+#loaded {
+  display: none;
 }
 
 @media only screen and (min-width: 800px) {

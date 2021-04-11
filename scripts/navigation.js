@@ -10,8 +10,7 @@ const menuSlide = () => {
       nav_menu.style.right = "-100%";  
       navbutton.classList.remove("close_menu");
     }
-}
-nav_link.addEventListener('click', menuSlide);
+};
 
 
 
