@@ -59,14 +59,24 @@
         <a href="#projects" id="nav-links">projects</a>
         <a href="#skills" id="nav-links">skills</a>
         <a href="#contact">contact</a>
+        <footer>
+            <p><span>&#169;</span> 2021 Neellohit Senapati | All rights reserved.</p>
+        </footer>
     </div>
     <div class="home" id="home">
         <div class="home_hero">
             <div class="hero_left">
                 <div class="hero_text">
+                    <p>Hi, I am Neellohit, your friendly neighbourhood Full Stack Developer.</p>
                     <p class="hero_about">
-                        I design innovative Full Stack Web Applications
+                        ${'Web Developer'} + ${'Mechanical Engineer'} + ${'UI/UX Designer'}
                     </p>
+                </div>
+                <div class="hero_icons">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-github"></ion-icon>
+                    <ion-icon name="logo-codepen"></ion-icon>
                 </div>
                 <div class="hero_buttons">
                     <button class="cyber_btn btn_white">Let's collaborate_</button>
@@ -74,17 +84,9 @@
                 </div>
             </div>
             <div class="hero_right">
-                    <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_sdvmv8o0.json" background="transparent"  speed="1" loop autoplay alt="me" id="lottie"></lottie-player>
+                    <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_sdvmv8o0.json" background="transparent" width="100%"  speed="1" loop autoplay alt="me" id="lottie"></lottie-player>
             </div>
         </div>
-        <marquee class="home_bg_text" scrollamount="0">
-            <h1>
-                Full Stack web Developer ,
-            </h1>
-            <h1>
-                ui/ux designer
-            </h1>
-        </marquee>
     </div>
     
     <div class="projects" id="projects">
@@ -97,10 +99,24 @@
             </div>
             <div class="projects_personal">
                 <div class="_project">
-                    <p class="project_name">1. celebrity face detector</p>
+                    <p class="project_name">celebrity face detector</p>
                     <div class="_project_content celeb">
                         <div class="project_about">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam molestiae vel molestias illum ea eligendi laboriosam perferendis, pariatur facere! Distinctio modi esse soluta eos sapiente! Quos aliquid praesentium sit delectus!</p>
+                            <div class="project_detail">
+                                <p>A React based Web App which detects the faces from the image uploaded by user and finds out the closest matching celebrity faces. The app also features NSFW detection in case anyone decides to get naughty. Press the '?' button on the top-left corner for help within the app.
+                                </p>
+                                </div>
+                            <div class="project_techs">
+                                <span>React Js</span>
+                                <span>CSS 3</span>
+                                <span>Tensorflow JS</span>
+                                <span>API calling</span>
+                            </div>
+                            <div class="project_buttons">
+                                <a href="https://celebrity-face-detector.netlify.app/" target="_blank">
+                                    Live Website</a>
+                                <a>View Code</a>
+                            </div>
                         </div>
                         <div class="project_demo">
                             <img src="https://i.pinimg.com/originals/db/19/fb/db19fb55decc074440b5afd115016b41.gif" alt="">
@@ -111,7 +127,21 @@
                     <p class="project_name">2. state of covid 2021</p>
                     <div class="_project_content covid">
                         <div class="project_about">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam molestiae vel molestias illum ea eligendi laboriosam perferendis, pariatur facere! Distinctio modi esse soluta eos sapiente! Quos aliquid praesentium sit delectus!</p>
+                            <div class="project_detail">
+                                <p><strong>This is not a COVID Tracker</strong>. This app shows results and various other data regarding COVID-19 of all nations across the globe and then piles them up against one another to check how each country tackled COVID-19 in their respective nations. This project took me the longest time to build. Press the hamburger icon on the left to check the different categories. Theme is inspired by the stateofjs.com website. View on Desktop for best experience.
+                                </p>
+                                </div>
+                            <div class="project_techs">
+                                <span>React Js</span>
+                                <span>CSS 3</span>
+                                <span>Rapid API</span>
+                                <span>Nivo charts</span>
+                                <span>Recharts</span>
+                            </div>
+                            <div class="project_buttons">
+                                <a href="https://state-of-covid.netlify.app/" target="_blank">Live Website</a>
+                                <a>View Code</a>
+                            </div>
                         </div>
                         <div class="project_demo">
                             <img loading="lazy" src="https://cdn.vox-cdn.com/thumbor/YZJgSAOkS1GJtUhmonX3d460Dz8=/0x51:500x332/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/36992002/tumblr_lmwsamrrxT1qagx30.0.0.gif" alt="demo"/>
@@ -122,21 +152,23 @@
                     <p class="project_name">2. state of covid 2021</p>
                     <div class="_project_content covid">
                         <div class="project_about">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam molestiae vel molestias illum ea eligendi laboriosam perferendis, pariatur facere! Distinctio modi esse soluta eos sapiente! Quos aliquid praesentium sit delectus!</p>
+                            <div class="project_detail">
+                                <p>
+                                    Last but not the least, this portfolio website is also a project which is very dear to me. I didn't use any external JS or animation libraries to achieve my different goals as I believe Vanilla JS is really underrated and one can do much more with it even without using UI libraries.
+                                </p>
+                                </div>
+                            <div class="project_techs">
+                                <span>HTML 5</span>
+                                <span>SCSS</span>
+                                <span>Vanilla Javascript</span>
+                            </div>
+                            <div class="project_buttons">
+                                <a target="_blank" href="#home">Live Website</a>
+                                <a>View Code</a>
+                            </div>
                         </div>
                         <div class="project_demo">
                             <img src="https://i.pinimg.com/originals/68/10/94/681094dcf9ee1efc961bb6dc268f4981.gif" alt="demo"/>
-                        </div>                   
-                    </div>
-                </div>
-                <div class="_project">
-                    <p class="project_name">2. state of covid 2021</p>
-                    <div class="_project_content covid">
-                        <div class="project_about">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam molestiae vel molestias illum ea eligendi laboriosam perferendis, pariatur facere! Distinctio modi esse soluta eos sapiente! Quos aliquid praesentium sit delectus!</p>
-                        </div>
-                        <div class="project_demo">
-                            <img src="https://cdn.vox-cdn.com/thumbor/YZJgSAOkS1GJtUhmonX3d460Dz8=/0x51:500x332/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/36992002/tumblr_lmwsamrrxT1qagx30.0.0.gif" alt="demo"/>
                         </div>                   
                     </div>
                 </div>
@@ -187,11 +219,15 @@
                         <p>Python 3</p>
                     </div>
                     <div class="skill_name">
+                        <img src="./assets/mongo.png" style="transform: scale(1.8);" alt="">
+                        <p>Mongo DB</p>
+                    </div>
+                    <div class="skill_name">
                         <img src="./assets/postgre.png" alt="">
                         <p>Postgre SQL</p>
                     </div>
                     <div class="skill_name">
-                        <img src="./assets/express.png" alt="">
+                        <img src="./assets/express.png" alt="" style="transform: scale(2);">
                         <p>Express JS</p>
                     </div>
                     
@@ -209,6 +245,10 @@
                     <div class="skill_name">
                         <img src="./assets/figma.png" alt="">
                         <p>Figma</p>
+                    </div>
+                    <div class="skill_name">
+                        <img src="./assets/inkscape.png" alt="">
+                        <p>Inkscape</p>
                     </div>      
                 </div>
             </div>
@@ -265,19 +305,26 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="contact_form">
-            <form id="form" class="topBefore">
-                <div class="form_left">
-                    <input id="name" type="text" placeholder="NAME">
-                    <input id="email" type="text" placeholder="E-MAIL">
-                    <input id="submit" type="submit" value="GO!">   
-                </div>
-                <div class="form_right">
-                    <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
-                </div>
-          </form>
-
-            </div> -->
+            <div class="contact_form">
+                <h2>drop me a message</h2>
+                <form action="" method="POST">
+                    <div class="input_box">
+                        <input type="text" placeholder="Roronoa zoro" required>
+                        <span>Full Name</span>
+                    </div>
+                    <div class="input_box">
+                        <input type="email" placeholder="lost_swordsman@mugiwara.com" required>
+                        <span>Email Address</span>
+                    </div>
+                    <div class="input_box">
+                        <textarea required placeholder="Mr. Senapati, you might be cool, but I am cooler.."></textarea>
+                        <span>Your Message</span>
+                    </div>
+                    <div class="input_button">
+                    <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     </div>

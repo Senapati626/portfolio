@@ -54,18 +54,10 @@
     ._project{
         margin: 20px 10px;
         .project_name{
+            font-family: $vipFont;
             font-size: 2em;
             text-transform: uppercase;
         }
-    }
-}
-.celeb{
-    background-color: white;
-}
-.covid{
-    background-color: #222429;
-    p{
-        color: whitesmoke;
     }
 }
 ._project_content{
@@ -75,12 +67,58 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    background-color: white;
+    border-radius: 8px;
 
 }
 .project_about{
     padding: 0.8em 1em;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .project_detail{
+        font-size: 1.2em;
+    }
+    .project_techs{
+        margin: 1em 0;
+        width: 100%;
+        display: flex;
+        padding: 0 1.1em;
+        justify-content: center;
+        flex-wrap: wrap;
+        span{
+            font-size: 0.8em;
+            white-space: nowrap;
+            margin: 0.5em;
+            width: fit-content;
+            background-color: $primaryWhite;
+            padding: 0.5em 1em;
+            border-radius: 1em;
+            font-weight: 600;
+        }
+    }
+    .project_buttons{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        a{
+            color: black;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-family: $coolFont;
+            font-size: 20px;
+            border-radius: 18px;    
+            background-color: white;
+            border: 5px solid black;
+            transition: all 0.6s ease;
+            &:hover{
+                background-color: $primaryBlack;
+                color: white;
+            }
+    }   }
 }
 .project_demo{
     background-repeat: no-repeat;

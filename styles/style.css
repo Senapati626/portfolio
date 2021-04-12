@@ -82,20 +82,9 @@
 }
 
 .projects_personal ._project .project_name {
+  font-family: "Bodoni Moda", sans-serif;
   font-size: 2em;
   text-transform: uppercase;
-}
-
-.celeb {
-  background-color: white;
-}
-
-.covid {
-  background-color: #222429;
-}
-
-.covid p {
-  color: whitesmoke;
 }
 
 ._project_content {
@@ -108,13 +97,88 @@
       grid-template-columns: 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+  background-color: white;
+  border-radius: 8px;
 }
 
 .project_about {
   padding: 0.8em 1em;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project_about .project_detail {
+  font-size: 1.2em;
+}
+
+.project_about .project_techs {
+  margin: 1em 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1.1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.project_about .project_techs span {
+  font-size: 0.8em;
+  white-space: nowrap;
+  margin: 0.5em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #e1d9cd;
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  font-weight: 600;
+}
+
+.project_about .project_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project_about .project_buttons a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-family: "Cyber", serif;
+  font-size: 20px;
+  border-radius: 18px;
+  background-color: white;
+  border: 5px solid black;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.project_about .project_buttons a:hover {
+  background-color: #050303;
+  color: white;
 }
 
 .project_demo {
@@ -161,11 +225,9 @@
 .home_hero {
   display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  place-items: center;
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
   padding: 0 2em;
 }
 
@@ -186,8 +248,14 @@
           justify-content: center;
 }
 
+.home_hero .hero_left p {
+  font-size: 2.5em;
+}
+
 .home_hero .hero_left .hero_about {
-  font-size: 2em;
+  font-size: 1.25em;
+  margin-top: 20px;
+  color: #0265e7;
 }
 
 .home_hero .hero_left .hero_buttons {
@@ -208,6 +276,18 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 0 10px;
+}
+
+.home_hero .hero_icons {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home_hero .hero_icons ion-icon {
+  margin: 0 20px;
+  font-size: 2em;
 }
 
 .home_bg_text {
@@ -347,6 +427,10 @@
   transition: all 1s ease;
 }
 
+.menu_container a:nth-child(1) {
+  margin-top: 50px;
+}
+
 .menu_container a {
   text-decoration: none;
   font-size: 5.5em;
@@ -366,6 +450,29 @@
   -webkit-text-stroke-width: 0px;
 }
 
+.menu_container footer {
+  width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 0.6em;
+}
+
+.menu_container footer p {
+  letter-spacing: 1px;
+  font-weight: 100;
+  color: #f1eee8;
+}
+
 @media only screen and (min-width: 450px) {
   .home_name {
     display: -ms-grid;
@@ -381,6 +488,9 @@
   .menu_container a {
     font-size: 3em;
   }
+  .menu_container a:nth-child(1) {
+    margin-top: 0;
+  }
 }
 
 .contact {
@@ -392,16 +502,22 @@
 }
 
 .contact_scroll {
-  padding: 2em 1em;
+  padding: 2em 0;
   width: 100%;
   height: auto;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  gap: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact_details {
+  width: 100%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -562,248 +678,119 @@
 }
 
 .contact_form {
-  padding: 2em;
-  border-radius: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: -webkit-gradient(linear, left top, right top, from(black), to(#353434));
-  background: linear-gradient(to right, black, #353434);
+  border-left: 1.5px solid black;
+  width: 100%;
+  padding: 4em;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
+.contact_form form {
+  max-width: 600px;
+  display: -ms-grid;
+  display: grid;
 }
 
-input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
-  color: #bbb5af;
+.contact_form h2 {
+  font-size: 2em;
+  font-family: "Bodoni Moda", sans-serif;
+  text-transform: uppercase;
+  color: #201d1d;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
-}
-
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
-}
-
-input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
-}
-
-input::placeholder, textarea::placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
-}
-
-input:focus::-webkit-input-placeholder, textarea::focus:placeholder {
-  color: #bbb5af;
-}
-
-input:focus:-ms-input-placeholder, textarea::focus:placeholder {
-  color: #bbb5af;
-}
-
-input:focus::-ms-input-placeholder, textarea::focus:placeholder {
-  color: #bbb5af;
-}
-
-input:focus::placeholder, textarea::focus:placeholder {
-  color: #bbb5af;
-}
-
-input::-ms-placeholder, textarea::-ms-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
-}
-
-input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
-  color: #bbb5af;
-}
-
-/* on hover placeholder */
-input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
-}
-
-input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
-  color: #cbc6c1;
-}
-
-input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
-}
-
-input:hover:-ms-input-placeholder, textarea:hover:-ms-input-placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
-}
-
-input:hover::-ms-input-placeholder, textarea:hover::-ms-input-placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
-}
-
-input:hover::placeholder, textarea:hover::placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
-}
-
-input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
-  color: #cbc6c1;
-}
-
-input:hover:focus:-ms-input-placeholder, textarea:hover:focus:-ms-input-placeholder {
-  color: #cbc6c1;
-}
-
-input:hover:focus::-ms-input-placeholder, textarea:hover:focus::-ms-input-placeholder {
-  color: #cbc6c1;
-}
-
-input:hover:focus::placeholder, textarea:hover:focus::placeholder {
-  color: #cbc6c1;
-}
-
-input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
-}
-
-input:hover:-ms-input-placeholder, textarea:hover:-ms-input-placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
-}
-
-input:hover::-ms-input-placeholder, textarea:hover::-ms-input-placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
-}
-
-input:hover::placeholder, textarea:hover::placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
-}
-
-input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
-  color: #cbc6c1;
-}
-
-#form {
+.contact_form .input_box {
+  margin-top: 50px;
   position: relative;
-  margin: 50px auto 100px auto;
+  width: 100%;
+  height: 100%;
+}
+
+.contact_form .input_box input {
+  height: 30px;
+  width: 100%;
+  padding: 0.5em;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid #1a1919;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: 18px;
+}
+
+.contact_form .input_box input:focus {
+  outline: none;
+  border-bottom: 2px solid tomato;
+}
+
+.contact_form .input_box textarea {
+  resize: none;
+  width: 100%;
+  height: 200px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.contact_form .input_box textarea:focus {
+  border: 1px solid tomato;
+}
+
+.contact_form .input_box span {
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  opacity: 0;
+  font-family: "Cyber", serif;
+}
+
+.contact_form .input_box input[placeholder], .contact_form .input_box textarea[placeholder] {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.input_button {
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  color: #e0e4e4;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #141313;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 20px;
+  padding: 0.75em 2em;
+  border-radius: 8px;
+  font-size: 18px;
 }
 
-.form_left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-  gap: 20px;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+.contact_form .input_box input:focus ~ span {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  opacity: 1;
 }
 
-input, textarea {
-  border-radius: 10px;
-}
-
-input {
-  font-family: "Cyber", serif;
-  font-size: 0.875em;
-  width: 250px;
-  height: 50px;
-  padding: 0px 15px 0px 15px;
-  outline: none;
-  color: #726659;
-  border-bottom: none;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-}
-
-input:hover {
-  background: #000000;
-  color: #e2dedb;
-  border: 2px solid white;
-}
-
-textarea {
-  width: 250px;
-  max-width: 470px;
-  height: 185px;
-  max-height: 185px;
-  padding: 15px;
-  outline: none;
-  color: #726659;
-  font-size: 0.875em;
-  border: solid 1px #b3aca7;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-}
-
-textarea:hover {
-  background: #0c0c0b;
-  color: #e2dedb;
-}
-
-#submit {
-  width: 250px;
-  height: 50px;
-  padding: 0;
-  margin: -5px 0px 0px 0px;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
-  color: #1a1714;
-  outline: none;
-  cursor: pointer;
-  border: solid 1px #b3aca7;
-  border-top: none;
-  background: #4ef76d;
-}
-
-#submit:hover {
-  color: #f80606;
-}
-
-@media screen and (max-width: 800px) {
-  #form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
+.contact_form .input_box textarea:focus ~ span {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  opacity: 1;
 }
 
 @media screen and (max-width: 450px) {
@@ -816,6 +803,21 @@ textarea:hover {
   }
   .card_container .contact_card .back .back_paper p {
     font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .contact_scroll {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact_form {
+    border: none;
+  }
+  .input_box {
+    margin-top: 20px;
   }
 }
 
@@ -1045,8 +1047,8 @@ textarea:hover {
 
 .preloader .loader_1 p span {
   margin-left: 5px;
-  -webkit-animation: preload 0.5s ease-out infinite;
-          animation: preload 0.5s ease-out infinite;
+  -webkit-animation: preload 0.75s ease-out infinite;
+          animation: preload 0.75s ease-out infinite;
 }
 
 .preloader .loader_1 svg {
