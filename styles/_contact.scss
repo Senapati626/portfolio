@@ -55,6 +55,7 @@
               top: 10px;
               width: 80%;
               height: 95%;
+              background-color: wheat;
               background: url(https://naldzgraphics.net/wp-content/uploads/2012/08/16-Yellow.jpg);
               background-size: contain;
               display: flex;
@@ -76,6 +77,7 @@
           transform: rotateY(180deg);
           display: flex;
           align-items: center;
+          background-color: rgb(61, 21, 2);
           .back_paper{
               width: 90%;
               height: 80%;
@@ -84,6 +86,7 @@
               display: flex;
               align-items: center;
               padding: 0 2em;
+              background-color: rgb(243, 191, 94);
               background: url(https://i.pinimg.com/originals/85/f8/c4/85f8c4241e502636dd2bcf0f3c6e886e.jpg) no-repeat;
               p{
                   font-family: $writingFont;

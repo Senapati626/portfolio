@@ -49,10 +49,10 @@
     flex-wrap: wrap;
     padding: 2em 1em;
     justify-content: center;
-    gap: 2em;
     .skill_name{
         display: grid;
         place-items: center;
+        margin: 0.4em 1em;
         img{
             width: 4em;
             height: 4em;

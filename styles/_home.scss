@@ -16,25 +16,25 @@
     width: 100%;
     height: 90vh;
     padding: 0 2em;
-    gap: 10px;
     .hero_left{
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 50px;
+        margin: 20px 0;
         justify-content: center;
         .hero_about{
             font-size: 2em;
         }
         .hero_buttons{
             display: flex;
-            gap: 20px;
+            margin-top: 40px;
         }
     }
     .hero_right{
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0 10px;
     }
 }
 

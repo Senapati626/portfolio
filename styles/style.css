@@ -47,7 +47,6 @@
   margin: 80px 0.5em 0 0.5em;
   display: -ms-grid;
   display: grid;
-  gap: 30px;
   overflow-x: hidden;
 }
 
@@ -63,6 +62,7 @@
           align-items: center;
   width: 100%;
   border-bottom: 2px solid #050303;
+  margin: 1em 0.5em;
 }
 
 .frame_scroll .project_type p {
@@ -75,7 +75,10 @@
   padding: 1em 0;
   display: -ms-grid;
   display: grid;
-  gap: 20px;
+}
+
+.projects_personal ._project {
+  margin: 20px 10px;
 }
 
 .projects_personal ._project .project_name {
@@ -164,7 +167,6 @@
   width: 100%;
   height: 90vh;
   padding: 0 2em;
-  gap: 10px;
 }
 
 .home_hero .hero_left {
@@ -178,7 +180,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 50px;
+  margin: 20px 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -192,7 +194,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
+  margin-top: 40px;
 }
 
 .home_hero .hero_right {
@@ -205,6 +207,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 10px;
 }
 
 .home_bg_text {
@@ -292,7 +295,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-  gap: 8px;
 }
 
 .home_menu span {
@@ -301,6 +303,7 @@
   width: 40px;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+  margin: 4px 0;
 }
 
 .close_menu span:nth-child(1) {
@@ -373,7 +376,7 @@
 @media only screen and (max-width: 450px) {
   .menu_container {
     width: calc(100% - 70px);
-    padding: 0 1em;
+    padding: 0 2em;
   }
   .menu_container a {
     font-size: 3em;
@@ -469,6 +472,7 @@
   top: 10px;
   width: 80%;
   height: 95%;
+  background-color: wheat;
   background: url(https://naldzgraphics.net/wp-content/uploads/2012/08/16-Yellow.jpg);
   background-size: contain;
   display: -webkit-box;
@@ -506,6 +510,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #3d1502;
 }
 
 .card_container .contact_card .back .back_paper {
@@ -521,6 +526,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 0 2em;
+  background-color: #f3bf5e;
   background: url(https://i.pinimg.com/originals/85/f8/c4/85f8c4241e502636dd2bcf0f3c6e886e.jpg) no-repeat;
 }
 
@@ -829,6 +835,7 @@ textarea:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 8px;
 }
 
 .btn_black {
@@ -941,13 +948,13 @@ textarea:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 2em;
 }
 
 .skills_carousel .skill_name {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  margin: 0.4em 1em;
 }
 
 .skills_carousel .skill_name img {

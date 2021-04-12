@@ -36,12 +36,12 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    gap: 8px;
     span{
         height: 4.5px;
         background-color: black;
         width: 40px;
         transition: all 1s ease;
+        margin: 4px 0;
     }
 }
 .close_menu{
@@ -97,7 +97,7 @@
 @media only screen and (max-width: 450px){
     .menu_container{
         width: calc(100% - 70px);
-        padding: 0 1em;
+        padding: 0 2em;
         a{
             font-size: 3em;
         }
