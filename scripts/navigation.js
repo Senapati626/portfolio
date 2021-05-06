@@ -31,3 +31,18 @@ else{
 }
      
 })
+
+const btn = document.querySelectorAll(".btn");
+const slider = document.querySelectorAll(".project_slider");
+const btn2 = document.querySelectorAll(".btn2");
+for (let i=0; i<btn.length; i++){
+    btn[i].addEventListener("click", () => {
+    btn[i].style.opacity = "0";
+    slider[i].style.top = "0";
+    })
+
+    btn2[i].addEventListener("click", () => {
+    slider[i].style.top = "100%";
+    btn[i].style.opacity = "1";
+    })
+}

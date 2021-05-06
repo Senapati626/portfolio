@@ -48,6 +48,7 @@
   display: -ms-grid;
   display: grid;
   overflow-x: hidden;
+  width: 100%;
 }
 
 .frame_scroll .project_type {
@@ -66,7 +67,7 @@
 }
 
 .frame_scroll .project_type p {
-  font-size: 2.5em;
+  font-size: 1.8em;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -75,34 +76,109 @@
   padding: 1em 0;
   display: -ms-grid;
   display: grid;
+  justify-items: center;
 }
 
-.projects_personal ._project {
-  margin: 20px 10px;
-}
-
-.projects_personal ._project .project_name {
-  font-family: "Bodoni Moda", sans-serif;
-  font-size: 2em;
-  text-transform: uppercase;
-}
-
-._project_content {
-  margin: 1em 0;
+._project2 {
+  margin: 2em 0;
   width: 100%;
-  min-height: 476px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  background-color: white;
-  border-radius: 8px;
+  justify-items: center;
+}
+
+.project_wrapper {
+  width: 90%;
+  aspect-ratio: 10/16;
+  position: relative;
+  background-size: cover;
+  padding: 2em;
+  overflow: hidden;
+}
+
+.covid_project {
+  background: olive;
+}
+
+.folio_project {
+  background: teal;
+}
+
+.celeb_project {
+  background: palevioletred;
+}
+
+.stay {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px;
+}
+
+.stay button {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: #0f0f0f;
+  border: none;
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  text-transform: uppercase;
+  color: #41c7c7;
+  cursor: pointer;
+}
+
+.stay button:hover {
+  color: wheat;
+}
+
+.project_slider {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 3em 2em;
+  color: white;
+  overflow: hidden;
+}
+
+.project_slider button {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: absolute;
+  background: transparent;
+  top: 0;
+  right: 0;
+  margin: 2em;
+  border: none;
+  border-bottom: 2px solid tomato;
+  font-size: 0.8em;
+  padding: 0.5em 1em;
+  border-radius: 25px;
+  text-transform: uppercase;
+  color: #f1d8d8;
+  cursor: pointer;
+}
+
+.project_slider button:hover {
+  background-color: wheat;
+  color: black;
 }
 
 .project_about {
-  padding: 0.8em 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,16 +186,17 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 0.7em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .project_about .project_detail {
-  font-size: 1.2em;
+  text-align: center;
 }
 
 .project_about .project_techs {
@@ -143,7 +220,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #e1d9cd;
+  border: 1px solid white;
   padding: 0.5em 1em;
   border-radius: 1em;
   font-weight: 600;
@@ -154,21 +231,22 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .project_about .project_buttons a {
+  margin: 0 1em;
   color: black;
   text-decoration: none;
   padding: 0.5em 1em;
   cursor: pointer;
   font-family: "Cyber", serif;
-  font-size: 20px;
+  font-size: 1em;
   border-radius: 18px;
   background-color: white;
   border: 5px solid black;
@@ -181,31 +259,32 @@
   color: white;
 }
 
-.project_demo {
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.project_demo img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media only screen and (min-width: 1000px) {
-  .frame_scroll {
-    margin: 0 0 0 100px;
+@media only screen and (min-width: 1050px) {
+  .project_wrapper {
+    width: 70%;
+    aspect-ratio: 16/9;
   }
-  ._project_content {
-    -ms-grid-columns: 1fr 1.5fr;
-        grid-template-columns: 1fr 1.5fr;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
+  .project_detail {
+    font-size: 1.2em;
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 1050px) {
+  .project_wrapper {
+    aspect-ratio: 4/3;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .project_wrapper {
+    aspect-ratio: 10/16;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .project_wrapper {
+    aspect-ratio: 1/2.2;
+  }
   .frame_fixed {
     width: 70px;
   }
@@ -815,9 +894,6 @@ input[type="submit"] {
   }
   .contact_form {
     border: none;
-  }
-  .input_box {
-    margin-top: 20px;
   }
 }
 

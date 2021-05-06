@@ -33,6 +33,7 @@
     margin: 80px 0.5em 0 0.5em;
     display: grid;
     overflow-x: hidden;
+    width: 100%;
     .project_type{
         display: flex;
         justify-content: flex-start;
@@ -41,7 +42,7 @@
         border-bottom: 2px solid $primaryBlack;
         margin: 1em 0.5em;
         p{
-            font-size: 2.5em;
+            font-size: 1.8em;
             text-transform: uppercase;
             font-weight: 700;
         }
@@ -51,34 +52,97 @@
 .projects_personal{
     padding: 1em 0;
     display: grid;
-    ._project{
-        margin: 20px 10px;
-        .project_name{
-            font-family: $vipFont;
-            font-size: 2em;
-            text-transform: uppercase;
-        }
+    justify-items: center;
+}
+._project2{
+    margin: 2em 0;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+.project_wrapper{
+  width: 90%;
+  aspect-ratio: 10/16;
+  position: relative;
+//   min-height: 350px;
+  background-size: cover;
+  padding: 2em;
+  overflow: hidden;
+}
+.covid_project{
+    background: olive;
+}
+.folio_project{
+    background: teal;
+}
+.celeb_project{
+    background: palevioletred;
+}
+.stay{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 10px;
+  button{
+      transition: all 0.5s ease;
+      background-color: #0f0f0f;
+      border: none;
+      font-size: 1.1em;
+      padding: 0.5em 1em;
+      border-radius: 25px;
+      text-transform: uppercase;
+      color: rgb(65, 199, 199);
+      cursor: pointer;
+      &:hover{
+          color: wheat;
+      }
     }
 }
-._project_content{
-    margin: 1em 0;
-    width: 100%;
-    min-height: 476px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    background-color: white;
-    border-radius: 8px;
-
+.project_slider{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transition: all 0.5s ease;
+  padding: 3em 2em;
+  color: white;
+  overflow: hidden;
+  button{
+      transition: all 0.5s ease;
+      position: absolute;
+      background: transparent;
+      top: 0;
+      right: 0;
+      margin: 2em;
+      border: none;
+      border-bottom: 2px solid tomato;
+      font-size: 0.8em;
+      padding: 0.5em 1em;
+      border-radius: 25px;
+      text-transform: uppercase;
+      color: rgb(241, 216, 216);
+      cursor: pointer;
+      &:hover{
+          background-color: wheat;
+          color: black;
+      }
+    }
 }
+
+
 .project_about{
-    padding: 0.8em 1em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    font-size: 0.7em;
+    justify-content: center;
     .project_detail{
-        font-size: 1.2em;
+        text-align: center;
     }
     .project_techs{
         margin: 1em 0;
@@ -92,7 +156,7 @@
             white-space: nowrap;
             margin: 0.5em;
             width: fit-content;
-            background-color: $primaryWhite;
+            border: 1px solid white;
             padding: 0.5em 1em;
             border-radius: 1em;
             font-weight: 600;
@@ -101,15 +165,16 @@
     .project_buttons{
         display: flex;
         width: 100%;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         a{
+            margin: 0 1em;
             color: black;
             text-decoration: none;
             padding: 0.5em 1em;
             cursor: pointer;
             font-family: $coolFont;
-            font-size: 20px;
+            font-size: 1em;
             border-radius: 18px;    
             background-color: white;
             border: 5px solid black;
@@ -120,27 +185,36 @@
             }
     }   }
 }
-.project_demo{
-    background-repeat: no-repeat;
-    background-size: cover;
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
 
+
+
+
+
+@media only screen and (min-width: 1050px){
+    .project_wrapper{
+        width: 70%;
+        aspect-ratio: 16/9;
+    }
+    .project_detail{
+        font-size: 1.2em;
     }
 }
-
-@media only screen and (min-width: 1000px){
-    .frame_scroll{
-        margin: 0 0 0 100px;
+@media screen and (max-width: 1050px) {
+    .project_wrapper{
+        aspect-ratio: 4/3;
     }
-    ._project_content{
-        grid-template-columns: 1fr 1.5fr;
-        grid-template-rows: 1fr;
-    }
+    
 }
-@media screen and (max-width: 420px){
+@media screen and (max-width: 550px) {
+    .project_wrapper{
+        aspect-ratio: 10/16;
+    }
+    
+}
+@media screen and (max-width: 380px){
+    .project_wrapper{
+        aspect-ratio: 1/2.2;
+    }
     .frame_fixed{
         width: 70px;
         p{
