@@ -91,21 +91,28 @@
   width: 90%;
   aspect-ratio: 10/16;
   position: relative;
-  background-size: cover;
   padding: 2em;
   overflow: hidden;
 }
 
 .covid_project {
-  background: olive;
+  background: url(/assets/covid.png);
+  background-size: 100% 100%;
 }
 
 .folio_project {
-  background: teal;
+  background: url(/assets/folio.png);
+  background-size: 100% 100%;
 }
 
 .celeb_project {
-  background: palevioletred;
+  background: url(/assets/celeb.png);
+  background-size: 100% 100%;
+}
+
+.smart_project {
+  background: url(/assets/smartbrains.png);
+  background-size: 100% 100%;
 }
 
 .stay {
